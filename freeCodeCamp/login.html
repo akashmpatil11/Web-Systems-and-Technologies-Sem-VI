@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Learn to Code and Help Nonprofits | freeCodeCamp </title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+      <!--Nav Area-->
+            <nav class="nav-bar">
+                <ul class="nav-ul">
+                    <li class="nav-li" style="float: left; font-size: 160%">freeCodeCamp</li> <!-- left-->
+                    <li class="nav-li"><a href="login.html"> Log-in</a></li> <!-- right-->
+                    <li class="nav-li"><a href="#"> Donate</a></li>
+                    <li class="nav-li"><a href="#"> Map</a></li>
+                    <li class="nav-li"><a href="#"> Community</a></li>
+                </ul>
+            </nav>
+
+            <div class="div-main-content">
+                <h3>Login</h3>
+                <br>
+                <div align = "center">
+                    <form name="form" action="#">
+                          <input type = "text" name="name" placeholder="Username"/>
+                          <br><br>
+                          <input type = "password" name="pass" placeholder="Password"/>
+                          <br><br>
+                          <input type="submit" name="submit" value="Submit" onclick="Check(document.form.name, document.form.pass)"/>
+                          <br>
+                    </form>
+                </div>
+            </div>
+      </body>
+</html>
+
+<script>
+    function Check(name, pass) {
+        var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if(pass.value.match(passw) && name.length >=6) {
+            var password = pass.value;
+            var output = "";
+            output = "Correct Login ID and Password\nLogin Id:".name.value."\nPassword :".pass.value;
+            alert(output)
+            return true;
+        }
+        else {
+            alert('WRONG!!!\nThe password should contain at least one special case, one capital and one numeric characters.\nTry Again. ')
+            return false;
+        }
+    }
+</script>

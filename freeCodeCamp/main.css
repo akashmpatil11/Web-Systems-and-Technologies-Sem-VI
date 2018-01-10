@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: darkgreen;
+    position: fixed;
+    top: 0;
+    height: 9%
+}
+
+.nav-ul {
+    margin: 0;
+    list-style-type: none;
+    font-size: 165%;
+    color: white;
+}
+
+.nav-li {
+    display: block;
+    float: right;
+}
+
+.nav-li a {
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 20px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+.nav-li a:hover {
+    color: darkgreen;
+    background-color: white;
+}
+
+.div-main-content {
+    margin-top: 3%;
+    padding: 20px;
+    width: 100%;
+}
+
+.header-site-title {
+    font-weight: 400;
+    font-size: 55px;
+    padding: 5px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.ul-features {
+    list-style-type: none;
+}
+
+.li-features {
+    float: left;
+    width: 20%;
+    text-align: center;
+    height: 250px;
+    font-size: 24px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.img-features {
+    height: 200px;
+    width: 200px;
+}
+
+.div-btn {
+    margin-top: 29%;
+    width: 100%;
+    align-content: center;
+}
+
+.btn-main {
+    width: 50%;
+    margin-left: 25%;
+    height: 70px;
+    text-decoration: none;
+    background-color: #ffac33;
+    background-image: linear-gradient(#ffcc4d, #ffac33);
+    border-color: #f1a02a;
+    border-radius: 7px;
+}
+
+.btn-main a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 45px;
+    color: #292f33;
+}
+
+.div-ads {
+    margin: 1%;
+    width: 100%;
+}
+
+.header-ads {
+    font-weight: 400;
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.img-ads {
+    padding-left: 20%;
+}
+
+.hr-line {
+    margin-top: 30px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.div-people {
+    margin: 1%;
+    width: 100%;
+}
+
+.div-skills {
+    margin: 1%;
+    width: 100%;
+}
+
+.header-main-people {
+    font-weight: 400;
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.header-main-skills {
+    font-weight: 400;
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 40px;
+    text-align: center;
+}
+.img-people {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+.img-skills {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 50%;
+}
+
+.col-skills {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    height: 300px;
+}
+.col-people {
+    width: 33.33%;
+    float: left;
+    padding: 15px;
+    height: 300px;
+    font-size: 18px;
+}
