@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>SlideShow of Images</title>
+        <style>
+            .body {
+                background-color: #FAFAFA;
+            }
+            .content {
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+            .slideshow {
+                overflow: hidden;
+                height: auto;
+                width: auto;
+            }
+            img {
+                min-width: 90%;
+                min-height: 90%;
+            }
+            .button {
+                background-color: #0073BA;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .options .prev-next{
+                align-items: center;
+                justify-content: center;
+            }
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 100%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: black;
+                font-size: 18px;
+            }
+            .prev {
+                float: left;
+            }
+            .next {
+                float: right;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="options">
+                    <input class="button" type="text" id="time" value="500" placeholder="Speed in ms">
+                    <input class="button" type="button" value="Start" onclick="startSlideShow()">
+                    <input class="button" type="button" value="Stop" onclick="stopSlideShow()">
+                </div>
+                <div class="slideshow">
+                    <img src="IMG/1.jpeg" id="image";/>
+                </div>
+                <div class="prev-next">
+                    <input type="button" class="button" class="prev" value="Prev" onclick="prevImage()">
+                    <input type="button" class="button" class="next" value="Next" onclick="nextImage()">
+                </div>
+                <div id="text">
+
+                </div>
+            </div>
+        <div>
+    </body>
+</html>
+<script type="text/javascript">
+     var intervalId;
+     function startSlideShow() {
+         var time = document.getElementById("time").value;
+         //document.getElementById("text").innerHTML = time;
+         intervalId = setInterval(setImage, time);
+     }
+
+     function stopSlideShow() {
+         clearInterval(intervalId);
+     }
+
+     function setImage() {
+          var imageSrc = document.getElementById("image").getAttribute("src");
+          var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf("/") + 1, imageSrc.lastIndexOf("/") + 2);
+          if (currentImageNumber == 4) {
+               currentImageNumber = 0;
+          }
+          document.getElementById("image").setAttribute("src", "IMG/" + (Number(currentImageNumber) + 1) + ".jpeg");
+      }
+
+      function prevImage() {
+          var imageSrc = document.getElementById("image").getAttribute("src");
+          var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf("/") + 1, imageSrc.lastIndexOf("/") + 2);
+          if(currentImageNumber == 1) {
+              currentImageNumber = 5;
+          }
+          document.getElementById("image").setAttribute("src", "IMG/" + (Number(currentImageNumber) - 1) + ".jpeg");
+      }
+
+      function nextImage() {
+          var imageSrc = document.getElementById("image").getAttribute("src");
+          var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf("/") + 1, imageSrc.lastIndexOf("/") + 2);
+          if (currentImageNumber == 4) {
+               currentImageNumber = 0;
+          }
+          document.getElementById("image").setAttribute("src", "IMG/" + (Number(currentImageNumber) + 1) + ".jpeg");
+          //document.getElementById("text").innerHTML = currentImageNumber;
+
+      }
+</script>
