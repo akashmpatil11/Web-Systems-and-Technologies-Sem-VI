@@ -14,7 +14,22 @@
             h4:nth-of-type(3) {
                 color: blue;
             }
+            ol > li > ol{
+                counter-reset: list;
+                margin: 0;
+            }
+            ol > li > ol > li {
+                list-style: none;
+                position: relative;
+            }
+            ol > li > ol > li:before {
+                counter-increment: list;
+                content: "(" counter(list, lower-alpha) ") ";
+                position: absolute;
+                left: -1.4em;
+            }
             .page-wrapper {
+                font: Serif;
                 background-color: grey;
                 padding-left: 10%;
                 padding-right: 10%;
@@ -36,7 +51,7 @@
                     <h4>Web Systems and Technologies Laboratory</h4>
                     <h4>No. of credits: 1</h4>
                     <h4>List of Assignments</h4>
-                    <h4>Academic Year 2017-18 		Sem VI</h4>
+                    <h4>Academic Year 2017-18 &nbsp;&nbsp; Sem VI</h4>
                 </div>
                 <div class="list">
                     <ol>
@@ -46,7 +61,7 @@
                         <li>
                             Implement a system for addition, deletion and updation of student's records.  <strong>[30 Marks]</strong>
                             <ol type="a">
-                                <li>The students records have following fields: <br>MISID, Full Name,  Year of Admission, Fees, CGPA</li>
+                                <li>The students records have following fields: <br><i>MISID, Full Name,  Year of Admission, Fees, CGPA</i></li>
                                 <li>All students records are stored in a database.
                                 <li>Write a PHP script which reads all the students records from the database and displays as an editable tabular HTML pape.</li>
                                 <li>Apart from the table of entries, the page should have one form for entering new student records.</li>
